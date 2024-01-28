@@ -6,7 +6,7 @@ from main.models import Student
 
 class StudentListView(ListView):
     model = Student
-    template_name = 'main/index.html'
+    template_name = 'main/material_list.html'
 
 
 
