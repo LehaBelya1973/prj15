@@ -6,8 +6,7 @@ from main.models import Student
 
 class StudentListView(ListView):
     model = Student
-    template_name = 'main/material_list.html'
-
+    template_name = 'materials/material_list.html'
 
 
 def contact(request):
