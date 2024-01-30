@@ -1,5 +1,5 @@
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, DetailView, UpdateView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 
 from materials.models import Material
 
@@ -22,3 +22,8 @@ class MaterialListView(ListView):
 
 class MaterialDetailView(DetailView):
     model = Material
+
+
+class MaterialDeleteView(DeleteView):
+    model = Material
+    success_url = reverse_lazy('materials:list')

@@ -16,7 +16,7 @@
                            class="btn btn-sm btn-outline-secondary">View<a>
                         <a href="{% url 'materials:edit' object.pk %}" type="button"
                            class="btn btn-sm btn-outline-secondary">Edit<a>
-                        <a href="#" type="button"
+                        <a href="{% url 'materials:delete' object.pk %}" type="button"
                            class="btn btn-sm btn-outline-secondary">Delete<a>
                     </div>
                 </div>
