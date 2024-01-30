@@ -7,7 +7,7 @@ from materials.models import Material
 class MaterialCreateView(CreateView):
     model = Material
     fields = ('title', 'body',)
-    success_url = reverse_lazy('material:list')
+    success_url = reverse_lazy('materials:list')
     template_name = 'materials/material_form.html'
 
 
