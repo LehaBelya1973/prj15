@@ -1,12 +1,13 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView
 
 from main.models import Student
 
 
 class StudentListView(ListView):
     model = Student
-    template_name = 'materials/material_list.html'
+    template_name = 'main/index.html'
 
 
 def contact(request):
@@ -27,3 +28,7 @@ class StudentDetailView(DetailView):
     template_name = 'main/student_detail.html'
 
 
+class StudentCreateView(CreateView):
+    model = Student
+    fields = ('first_name', 'last_name', 'avatar')
+    success_url = reverse_lazy('main:index')
