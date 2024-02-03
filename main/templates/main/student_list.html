@@ -24,6 +24,11 @@
                                 <a href="{% url 'main:delete_student' object.pk %}" type="button"
                                     class="btn btn-sm btn-outline-danger">Delete</a>
                             </div>
+                            {% if object.is_active %}
+                                <a class="btn btn-warning" href="{% url 'main:toggle_activity' object.pk %}">Деактивировать</a>
+                            {% else %}
+                                <a class="btn btn-success" href="{% url 'main:toggle_activity' object.pk %}">Активировать</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
