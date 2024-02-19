@@ -18,16 +18,16 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a href="{% url 'main:view_student' object.pk %}"
-                                   class="btn btn-sm btn-outline-secondary">View</a>
+                                   class="btn btn-sm btn-outline-secondary">Просмотр</a>
                                 <a href="{% url 'main:update_student' object.pk %}" type="button"
-                                    class="btn btn-sm btn-outline-secondary">Edit</a>
+                                    class="btn btn-sm btn-outline-secondary">Редакт.</a>
                                 <a href="{% url 'main:delete_student' object.pk %}" type="button"
-                                    class="btn btn-sm btn-outline-danger">Delete</a>
+                                    class="btn btn-sm btn-outline-danger">Удал.</a>
                             </div>
                             {% if object.is_active %}
-                                <a class="btn btn-warning" href="{% url 'main:toggle_activity' object.pk %}">Деактивировать</a>
+                                <a class="btn btn-warning" href="{% url 'main:toggle_activity' object.pk %}">Деактив.</a>
                             {% else %}
-                                <a class="btn btn-success" href="{% url 'main:toggle_activity' object.pk %}">Активировать</a>
+                                <a class="btn btn-success" href="{% url 'main:toggle_activity' object.pk %}">Актив.</a>
                             {% endif %}
                         </div>
                     </div>
